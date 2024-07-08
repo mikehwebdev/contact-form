@@ -118,6 +118,7 @@ body {
 }
 .star-span {
   color: var(--Green-600);
+  margin-left: .5rem;
 }
 
 .input {
