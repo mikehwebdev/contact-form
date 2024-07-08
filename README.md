@@ -1,6 +1,6 @@
 # Frontend Mentor Contact Form
 
-## The [Contact Form])(https://www.frontendmentor.io/challenges/contact-form--G-hYlqKJj)T) is a Free Challenge at [Frontend Mentor](https://www.frontendmentor.io/home).
+## The [Contact form](https://www.frontendmentor.io/challenges/contact-form--G-hYlqKJj) is a Free Challenge at [Frontend Mentor](https://www.frontendmentor.io/home).
 
 ## The project:
 
