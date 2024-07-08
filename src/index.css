@@ -1,68 +1,313 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --Grey-900: #2A4144;
+  --Grey-500:#86A2A5;
+  --White: #ffffff;
+  --Green-600:#0C7D69;
+  --Green-200:#E0F1E8;
+  --Red:#D73C3C;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
+
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+  background-color: var(--Green-200);
+  font-family:"Karla", sans-serif;
+  position: relative;
+}
+
+.container {
+  display: grid;
   min-height: 100vh;
+  place-items: center;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.modal {
+  position: absolute;
+  top: 0;
+  margin: 1.5rem 1.5rem;
+  background-color: var(--Grey-900);
+  width: 327px;
+  padding: 1.5rem 1.5rem;
+  border-radius: 0.75rem;
+  width: auto;
+  max-width: 28.125rem;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.modal-img {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin:  4.5px 0 4.5px 2.25px;
+}
+
+.modal-flex-container {
+  display: flex;
+  align-items: center;
+}
+
+.modal-title {
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
+  color: var(--White);
+  margin-left: .5rem;
+}
+
+.modal-message {
+  font-weight: 400;
+  line-height: 1.5rem;
+  color: var(--Green-200);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  min-width: 91%;
+  padding: 1.5rem;
+  background-color: var(--White);
+  border-radius: 1rem;
+  margin: 2rem 1rem;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-container-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2rem;
+  letter-spacing: -1px;
+  color: var(--Grey-900);
+  margin-bottom: 2rem;
+  letter-spacing: -1px;
+}
+
+.label {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5rem; 
+  margin: 1.5rem 0 0.5rem 0;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.first-name {
+  margin-top: 0;
+}
+
+.query {
+  margin-bottom: 1rem;
+}
+.star-span {
+  color: var(--Green-600);
+}
+
+.input {
+  min-width: 18.437rem;
+  height: 3.187rem;
+  border-radius: .5rem;
+  border: 1px solid var(--color-grey-500, rgba(134, 162, 165, 1));
+  padding: .75rem 1.5rem;
+  cursor: pointer;
+  accent-color: var(--Green-600);
+  font-size: 1.125rem;
+  color: var(--Grey-900);
+  font-weight: 400;
+  line-height: 1.6875rem;  
+}
+
+.radio-input-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 18.437rem;
+  height: 3.187rem;
+  border-radius: .5rem;
+  border: 1px solid var(--color-grey-500, rgba(134, 162, 165, 1));
+  padding: 12px 24px;
+}
+
+.radio-input-container:first-of-type {
+  margin-bottom: 1rem;
+}
+
+input[type="radio"] {
+  width: 1.218rem;
+  height: 1.218rem;
+  color: var(--Grey-500);
+  margin: 2.25px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+  accent-color: var(--Green-600);
+  cursor: pointer;
+}
+
+.radio-input-container:has(input[type="radio"]:checked) {
+  background-color: var(--Green-200);
+  color: var(--Grey-900);
+}
+
+.radio-label {
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.687rem;
+  margin-left: 0.75rem;
+  cursor: pointer;
+}
+
+.message-area {
+  display: block;
+  min-width: 18.437rem;
+  border-radius: .5rem;
+  height: 15rem;
+  padding: .75rem 1.5rem;
+  border: 1px solid var(--color-grey-500, rgba(134, 162, 165, 1));
+  cursor: pointer;
+  font-size: 1.125rem;
+  font-family: 'Karla';
+  font-size: 1.125rem;
+  color: var(--Grey-900);
+  font-weight: 400;
+  line-height: 1.6875rem;
+  resize: none;
+}
+
+.message-area + .error-message {
+  line-height: 1.5rem;
+}
+
+.checked-input-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 2.5rem 0 0 0;
+}
+
+.checkbox {
+  width: 1.125rem;
+  height: 1.125rem;
+  margin: 0.1875rem;
+  color: var(--Grey-500);
+}
+
+.checkbox-label {
+  font-size: 1rem;
+  font-weight: 400;
+  margin:0 1.5rem 0 1rem;
+  line-height: 1.5rem;
+  color: var(--Grey-900);
+  cursor: pointer;
+}
+
+.submit-button {
+  min-width: 18.437rem;
+  height: 3.6875rem;
+  background-color: var(--Green-600);
+  color: var(--White);
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
+  border-radius: .5rem;
+  cursor: pointer;
+  transition: all 500ms;
+  margin-top: 2.5rem;
+}
+
+.submit-button:hover {
+  background-color: var(--Grey-900);
+  transition: all 500ms;
+}
+
+.error {
+  border: 1px solid var(--Red);
+}
+
+.error-message {
+  display: none;
+  color: var(--Red);
+  margin-top: .25rem;
+  line-height: 1.5rem;
+}
+
+.error + .error-message, .visible {
+  display: block;
+  color: var(--Red);
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+@media screen and (min-width:768px) {
+
+  .card {
+    margin: 8rem 0 0 0;
   }
-  a:hover {
-    color: #747bff;
+
+  .modal-flex-container {
+    margin-bottom: .5rem;
   }
-  button {
-    background-color: #f9f9f9;
+
+  .flex-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: 100%;
   }
+
+  .flex-container-child {
+    display: flex;
+    flex-direction: columns;
+    width: 50%;
+  }
+
+  .last-name {
+    margin-top: 0;
+  }
+
+  .radio-input-container{
+    width: 50%;
+  }
+
+  .radio-input-container:first-of-type {
+    margin-bottom: 0;
+  }
+
+  .card {
+    padding: 2.5rem;
+  }
+
+  .message-area {
+    height: 8.25rem;
+  }
+
+@media screen and (min-width:800px) {
+  
+  .card {
+    min-width: 0;
+    width: 46rem;
+  }
+
+  .message-area {
+    height: 6.56rem;
+  }
+  
+}
+
 }
