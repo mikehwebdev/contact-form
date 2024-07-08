@@ -20,9 +20,7 @@ body {
   background-color: var(--Green-200);
   font-family:"Karla", sans-serif;
   position: relative;
-  display: grid;
-  min-height: 100vh;
-  place-items: center;
+
 }
 
 .container {
